@@ -1,6 +1,6 @@
 {
   "name": "@jaya-almeida/enter-design-system",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Design system dark-first em OKLCH inspirado no Enter — Tailwind v4, React e Vue 3.",
   "license": "MIT",
   "author": "Shakti Jaya",
