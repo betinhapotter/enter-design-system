@@ -1,0 +1,31 @@
+# Normalize line endings: LF in the repo, auto-convert on checkout per-OS.
+* text=auto eol=lf
+
+# Explicit text types (belt-and-suspenders)
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.js    text eol=lf
+*.mjs   text eol=lf
+*.vue   text eol=lf
+*.css   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf
+*.html  text eol=lf
+
+# Keep shell scripts LF even if checked out on Windows
+*.sh    text eol=lf
+
+# Binary assets — never touch line endings
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.woff  binary
+*.woff2 binary
+*.ico   binary
+
+# Collapse generated files in diffs / exclude from language stats
+package-lock.json  linguist-generated=true
+tokens/tokens.json linguist-generated=true
