@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false, "declaration": true, "emitDeclarationOnly": true,
+    "declarationMap": true, "outDir": "dist/vue-types",
+    "rootDir": "src/vue", "skipLibCheck": true, "types": []
+  },
+  "include": ["src/vue/**/*.ts", "src/vue/**/*.vue"],
+  "exclude": ["**/*.stories.*"]
+}

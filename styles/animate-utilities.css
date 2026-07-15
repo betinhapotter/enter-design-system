@@ -1,0 +1,33 @@
+@utility animate-in {
+  animation-name: enter;
+  animation-duration: var(--tw-animate-duration, 200ms);
+  animation-timing-function: var(--tw-animate-ease, cubic-bezier(0,0,.2,1));
+  animation-fill-mode: both;
+  --tw-enter-opacity: initial; --tw-enter-scale: initial; --tw-enter-rotate: initial;
+  --tw-enter-translate-x: initial; --tw-enter-translate-y: initial; --tw-enter-blur: initial;
+}
+@utility animate-out {
+  animation-name: exit;
+  animation-duration: var(--tw-animate-duration, 150ms);
+  animation-timing-function: var(--tw-animate-ease, cubic-bezier(.4,0,1,1));
+  animation-fill-mode: both;
+  --tw-exit-opacity: initial; --tw-exit-scale: initial; --tw-exit-rotate: initial;
+  --tw-exit-translate-x: initial; --tw-exit-translate-y: initial; --tw-exit-blur: initial;
+}
+@utility fade-in { --tw-enter-opacity: 0; }
+@utility fade-out { --tw-exit-opacity: 0; }
+@utility zoom-in-* { --tw-enter-scale: calc(--value(integer) / 100); }
+@utility zoom-out-* { --tw-exit-scale: calc(--value(integer) / 100); }
+@utility spin-in-* { --tw-enter-rotate: calc(--value(integer) * 1deg); }
+@utility blur-in-sm { --tw-enter-blur: 4px; }
+@utility blur-in { --tw-enter-blur: 8px; }
+@utility blur-in-md { --tw-enter-blur: 12px; }
+@utility blur-out-sm { --tw-exit-blur: 4px; }
+@utility slide-in-from-top-* { --tw-enter-translate-y: calc(--value(integer) * -0.25rem); }
+@utility slide-in-from-bottom-* { --tw-enter-translate-y: calc(--value(integer) * 0.25rem); }
+@utility slide-in-from-left-* { --tw-enter-translate-x: calc(--value(integer) * -0.25rem); }
+@utility slide-in-from-right-* { --tw-enter-translate-x: calc(--value(integer) * 0.25rem); }
+@utility slide-out-to-bottom-* { --tw-exit-translate-y: calc(--value(integer) * 0.25rem); }
+@utility duration-* { --tw-animate-duration: calc(--value(integer) * 1ms); }
+@utility ease-enter { --tw-animate-ease: cubic-bezier(0,0,.2,1); }
+@media (prefers-reduced-motion: reduce) { .animate-in, .animate-out { animation: none; } }

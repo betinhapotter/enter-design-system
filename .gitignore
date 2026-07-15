@@ -1,0 +1,15 @@
+node_modules/
+dist/
+storybook-static/
+.vite/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+coverage/
+
+# Local-only artifacts (not part of the published package)
+enter-scrape.md
+bootstrap.sh

@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "../tokens/tokens.css";
+@import "./keyframes.css";
+@import "./animate-utilities.css";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-fill: var(--fill);
+  --color-brand: #fb88ad;
+  --color-brand-active: var(--brand-active-bg);
+  --color-alert: #f0b100;
+  --color-slate-bg:#96a5b933; --color-slate-fg:#cbd5e1;
+  --color-gray-bg:#9ba5af33;  --color-gray-fg:#d1d5db;
+  --color-red-bg:#fa737333;   --color-red-fg:#fca5a5;
+  --color-amber-bg:#fabe2333; --color-amber-fg:#fcd34d;
+  --color-yellow-bg:#facd1433;--color-yellow-fg:#fde047;
+  --color-green-bg:#4bdc8233; --color-green-fg:#86efac;
+  --color-emerald-bg:#32d29b33;--color-emerald-fg:#6ee7b7;
+  --color-teal-bg:#2dd2be33;  --color-teal-fg:#5eead4;
+  --color-cyan-bg:#23d2f033;  --color-cyan-fg:#67e8f9;
+  --color-sky-bg:#37befa33;   --color-sky-fg:#7dd3fc;
+  --color-blue-bg:#5fa5fa33;  --color-blue-fg:#93c5fd;
+  --color-indigo-bg:#828cfa33;--color-indigo-fg:#a5b4fc;
+  --color-violet-bg:#a58cfa33;--color-violet-fg:#c4b5fd;
+  --color-purple-bg:#be82fa33;--color-purple-fg:#d8b4fe;
+  --color-pink-bg:#f573b433;  --color-pink-fg:#f9a8d4;
+  --color-rose-bg:#fa738733;  --color-rose-fg:#fda4af;
+  --color-orange-bg:#fa913c33;--color-orange-fg:#fdba74;
+  --color-lime-bg:#a5e63733;  --color-lime-fg:#bef264;
+  --color-stone-bg:#aaa0a033; --color-stone-fg:#d6d3d1;
+  --color-neutral-bg:#a5a5a533;--color-neutral-fg:#d4d4d4;
+  --color-zinc-bg:#a0a0aa33;  --color-zinc-fg:#d4d4d8;
+  --color-fuchsia-bg:#e678fa33;--color-fuchsia-fg:#f0abfc;
+  --color-fill-tr-10:#ebebeb1a; --color-fill-tr-20:#ebebeb33;
+  --color-fill-tr-30:#ebebeb4d; --color-fill-tr-40:#ebebeb66;
+  --color-fill-tr-50:#ebebeb80; --color-fill-tr-60:#ebebeb99;
+  --shadow-md: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+  --shadow-lg: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+  --shadow-card-elevated: 0 24px 48px oklch(0% 0 0 / .28);
+  --shadow-input-glow-focus: 0 0 30px oklch(100% 0 0 / .08);
+  --shadow-input-glow-hover: 0 0 25px oklch(100% 0 0 / .05);
+  --ease-out-enter: cubic-bezier(0,0,.2,1);
+  --animate-fade-in: fadeIn .2s ease-out;
+  --animate-fade-out: fadeOut .15s ease-in;
+  --animate-slide-up: slideUp .3s cubic-bezier(0,0,.2,1);
+  --animate-pulse-glow: pulse-glow 1.8s ease-out infinite;
+  --animate-brand-spinner: brand-spinner-step 1s steps(24) infinite;
+  --animate-claude-pulse: claude-pulse 1.6s ease-in-out infinite;
+  --animate-loading-icon: loading-icon-rotate 1.2s ease-in-out infinite;
+  --animate-fan-out: fanOut .4s cubic-bezier(.34,1.56,.64,1);
+  --animate-shake: shake .8s cubic-bezier(.36,.07,.19,.97);
+  --animate-banner-shine: banner-shine-sweep 4s ease-in-out infinite;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body { background: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); }
+  :focus-visible { outline: 2px solid var(--color-ring); outline-offset: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

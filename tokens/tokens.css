@@ -1,0 +1,49 @@
+:root {
+  --radius: 0.625rem;
+  --background: oklch(100% 0 0);           /* #ffffff */
+  --foreground: oklch(14.5% 0 0);          /* #0a0a0a */
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(14.5% 0 0);
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(14.5% 0 0);
+  --primary: oklch(20.5% 0 0);             /* #171717 */
+  --primary-foreground: oklch(98.5% 0 0);
+  --secondary: oklch(97% 0 0);             /* #f5f5f5 */
+  --secondary-foreground: oklch(20.5% 0 0);
+  --muted: oklch(97% 0 0);
+  --muted-foreground: oklch(55.6% 0 0);    /* #737373 */
+  --accent: oklch(97% 0 0);
+  --accent-foreground: oklch(20.5% 0 0);
+  --destructive: oklch(57.71% .2152 27.33);/* #dc2626 */
+  --destructive-foreground: oklch(97.05% .0129 17.38);
+  --border: oklch(92.2% 0 0);              /* #ebebeb */
+  --input: oklch(92.2% 0 0);
+  --ring: oklch(71.55% 0 0);               /* #b5b5b5 */
+  --fill: oklch(70.5% .015 286.07);
+  --brand: oklch(76.2% .144 .58);          /* #fb88ad */
+  --brand-active-bg: oklch(76.2% .144 .58 / .12);
+  --pink-fg: oklch(82.28% .1095 346.018);
+  --alert: oklch(79.5% .184 86.05);        /* #f0b100 */
+}
+.dark {
+  --background: oklch(14.1% .005 285.82);          /* #09090b */
+  --foreground: oklch(98.5% 0 0);                  /* #fafafa */
+  --card: oklch(37.03% .0119 285.81 / .3);
+  --card-foreground: oklch(98.5% 0 0);
+  --popover: oklch(27.39% .0055 286.03);           /* #26262a */
+  --popover-foreground: oklch(98.5% 0 0);
+  --primary: oklch(96.7% .001 286.38);
+  --primary-foreground: oklch(21.2% .006 285.88);
+  --secondary: oklch(37.03% .0119 285.81 / .75);
+  --secondary-foreground: oklch(92% .004 286.32);
+  --muted: oklch(27.39% .0055 286.03);
+  --muted-foreground: oklch(71.2% .013 286.067);   /* #a1a1aa */
+  --accent: oklch(37.03% .0119 285.81 / .8);
+  --accent-foreground: oklch(98.5% 0 0);
+  --destructive: oklch(71.06% .1661 22.216);       /* #f87171 */
+  --destructive-foreground: oklch(97.1% .013 17.38);
+  --border: oklch(37.03% .0119 285.81 / .3);
+  --input: oklch(37.03% .0119 285.81 / .6);
+  --ring: oklch(44.19% .0146 285.79 / .5);
+  --fill: oklch(37.03% .0119 285.805);             /* #3f3f46 */
+}

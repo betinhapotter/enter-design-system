@@ -1,0 +1,36 @@
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes ping { 75%,100% { opacity: 0; transform: scale(2); } }
+@keyframes pulse { 50% { opacity: .5; } }
+@keyframes bounce {
+  0%,100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(.8,0,1,1); }
+  50% { transform: none; animation-timing-function: cubic-bezier(0,0,.2,1); }
+}
+@keyframes enter { 0% {
+  opacity: var(--tw-enter-opacity,1);
+  transform: translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0) scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1)) rotate(var(--tw-enter-rotate,0));
+  filter: blur(var(--tw-enter-blur,0)); } }
+@keyframes exit { 100% {
+  opacity: var(--tw-exit-opacity,1);
+  transform: translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0) scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1)) rotate(var(--tw-exit-rotate,0));
+  filter: blur(var(--tw-exit-blur,0)); } }
+@keyframes accordion-down { 0% { height: 0; } 100% { height: var(--radix-accordion-content-height, auto); } }
+@keyframes accordion-up { 0% { height: var(--radix-accordion-content-height, auto); } 100% { height: 0; } }
+@keyframes loading-icon-rotate { 50% { opacity: .3; } 100% { opacity: 1; } }
+@keyframes pulse-glow { 0% { opacity: .6; transform: scale(1); } 100% { opacity: 0; transform: scale(2.5); } }
+@keyframes brand-spinner-step { 100% { mask-position: calc(var(--brand-spinner-tile) * -24) 0; } }
+@keyframes claude-pulse { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fadeOut { 100% { opacity: 0; } }
+@keyframes slideUp { 0% { transform: translateY(100%); } 100% { transform: translateY(0); } }
+@keyframes fanOut { 0% { transform: scale(0) rotate(-90deg); opacity: 0; } 100% { transform: scale(1) rotate(0deg); opacity: 1; } }
+@keyframes shake {
+  0% { transform: rotate(-13deg); } 6.33% { transform: rotate(11deg); }
+  12.67% { transform: rotate(-13deg); } 19% { transform: rotate(11deg); }
+  25.33% { transform: rotate(-13deg); } 31.67% { transform: rotate(11deg); }
+  38%,100% { transform: rotate(-13deg); }
+}
+@keyframes banner-shine-sweep {
+  0% { opacity: .16; transform: translate3d(-145%,0,0); } 12% { opacity: .32; }
+  44% { opacity: var(--notification-banner-shine-peak-opacity,.62); }
+  72% { opacity: .38; } 100% { opacity: .18; transform: translate3d(245%,0,0); }
+}

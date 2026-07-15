@@ -1,0 +1,105 @@
+{
+  "name": "@jaya-almeida/enter-design-system",
+  "version": "1.0.0",
+  "description": "Design system dark-first em OKLCH inspirado no Enter — Tailwind v4, React e Vue 3.",
+  "license": "MIT",
+  "author": "Shakti Jaya",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betinhapotter/enter-design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/betinhapotter/enter-design-system/issues"
+  },
+  "homepage": "https://github.com/betinhapotter/enter-design-system#readme",
+  "keywords": [
+    "design-system",
+    "tailwind",
+    "react",
+    "vue",
+    "oklch",
+    "ui"
+  ],
+  "main": "./dist/react/index.cjs",
+  "module": "./dist/react/index.js",
+  "types": "./dist/react/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js",
+      "require": "./dist/react/index.cjs"
+    },
+    "./vue": {
+      "types": "./dist/vue/index.d.ts",
+      "import": "./dist/vue/index.js",
+      "require": "./dist/vue/index.cjs"
+    },
+    "./tokens": "./dist/tokens/tokens.json",
+    "./styles.css": "./dist/styles/app.css",
+    "./keyframes.css": "./dist/styles/keyframes.css",
+    "./animate.css": "./dist/styles/animate-utilities.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup && npm run build:vue-types && npm run build:assets",
+    "build:vue-types": "vue-tsc -p tsconfig.vue-types.json && node scripts/flatten-vue-types.mjs",
+    "build:assets": "node scripts/copy-assets.mjs",
+    "typecheck": "tsc --noEmit && vue-tsc --noEmit -p tsconfig.vue-types.json",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build && changeset publish",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "vue": ">=3.4"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.11",
+    "@storybook/addon-a11y": "^8.4.7",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-themes": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@tailwindcss/postcss": "^4.3.2",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "esbuild-plugin-vue3": "^0.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^8.4.7",
+    "tailwindcss": "^4.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.1.10"
+  }
+}

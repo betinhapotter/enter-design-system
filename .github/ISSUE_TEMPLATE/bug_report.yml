@@ -1,0 +1,30 @@
+name: 🐞 Bug report
+description: Reportar um comportamento inesperado
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o bug e o comportamento esperado.
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Importar `Button` de `/react`
+        2. ...
+    validations: { required: true }
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      options: [React, Vue, Ambos, CSS/tokens apenas]
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: Versão do pacote
+      placeholder: "1.0.0"
+    validations: { required: true }
